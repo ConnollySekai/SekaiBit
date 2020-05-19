@@ -1,0 +1,43 @@
+.search__result-count {
+    @apply text-center;
+}
+
+.search-result-link {
+    @apply block;
+}
+
+.search-result {
+    @apply px-4 py-2 cursor-pointer;
+
+    &:hover {
+        @apply shadow-normal;
+    }
+}
+
+.search-result__header {
+    @apply flex flex-col;
+
+    h3 {
+        @apply text-primary text-xl font-normal my-0 mr-2;
+    }
+
+    span {
+        @apply text-sm text-gray-400;
+    }
+}
+
+.search-result__body {
+    p {
+        @apply mb-0;
+    }
+}
+
+@screen md {
+    .search__result-count {
+        @apply text-left;
+    }
+    
+    .search-result__header { 
+        @apply flex-row;
+    }
+}

@@ -1,0 +1,36 @@
+.listing-registration {
+    @apply p-6;
+}
+
+.listing-registration__header {
+    @apply flex flex-col items-center mb-8;
+}
+
+.listing-registration__title {
+    @apply text-primary text-2xl text-center flex items-center;
+}
+
+.listing-registration__steps {
+    @apply text-sm text-gray-300;
+}
+
+.listing-registration__actions {
+    @apply flex justify-end mt-4;
+
+    & button {
+        @apply flex-1;
+    }
+}
+
+@screen md {
+    .listing-registration__header {
+        @apply flex-row justify-between;
+    }
+
+    .listing-registration__actions {
+    
+        & button {
+            @apply flex-none;
+        }
+    }
+}

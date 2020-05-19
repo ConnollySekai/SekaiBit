@@ -1,0 +1,9 @@
+.site-header {
+    @apply flex w-full mx-auto py-4
+}
+
+@screen md {
+    .site-header {
+        @apply w-10/12 py-8;
+    }
+}

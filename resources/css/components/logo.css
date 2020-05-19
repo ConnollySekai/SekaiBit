@@ -1,0 +1,33 @@
+.logo {
+    height: auto;
+    max-width: 212px;
+    transition: max-width .3s ease-in-out;
+    @apply mx-auto mt-12 mb-8;
+}
+
+@screen sm {
+    .logo {
+        max-width: 312px;
+        @apply mt-16;
+    }
+}
+
+@screen md {
+    .logo {
+        max-width: 370px;
+        @apply mt-20;
+    }
+}
+
+@screen lg {
+    .logo {
+        max-width: 465px;
+        @apply mt-24;
+    }
+}
+
+@screen xl{
+    .logo {
+        max-width: 512px;
+    }
+}

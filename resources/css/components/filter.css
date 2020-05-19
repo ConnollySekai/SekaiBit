@@ -1,0 +1,11 @@
+.filter {
+    @apply text-sm text-gray-300;
+
+    & a.active {
+        @apply text-primary font-bold;
+    }
+
+    & a:not(.active):hover {
+        @apply text-gray-400;
+    }
+}

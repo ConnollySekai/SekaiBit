@@ -1,0 +1,18 @@
+.ad {
+    height: 100%;
+    width: 100%;
+
+    img {
+        @apply shadow-normal border border-gray-200;
+    }
+    
+    &--desktop {
+        max-height: 600px;
+        max-width: 160px;
+    }
+
+    &--mobile {
+        max-height: 100px;
+        max-width: 320px;
+    }
+}

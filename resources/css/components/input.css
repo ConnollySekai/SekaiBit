@@ -1,0 +1,113 @@
+input[type='email'].input,
+input[type='number'].input, 
+input[type='password'].input,
+input[type='text'].input,
+textarea  {
+    @apply w-full border border-gray-200 rounded-md text-base py-1 px-2;
+
+    &--rounded {
+        @apply rounded-full;
+    }
+
+    &--lg {
+        @apply py-3 text-lg;
+    }
+}
+
+select.input {
+    @apply w-full border border-gray-200 rounded-md text-base py-2 px-2;
+
+    &--rounded {
+        @apply rounded-full;
+    }
+
+    &--lg {
+        @apply py-3 text-lg;
+    }
+}
+
+input[type='email'].input--error,
+input[type='number'].input--error, 
+input[type='password'].input--error,
+input[type='text'].input--error,
+textarea.input--error,
+select.input--error  {
+    @apply border-error;
+}
+
+.input-icon {
+
+    i {
+        width: 25px;
+        @apply block;
+    }
+
+    input[type='email'].input,
+    input[type='number'].input, 
+    input[type='password'].input,
+    input[type='text'].input {
+        @apply border-none pl-4;
+    }
+
+    .input:focus {
+        outline: none;
+    }
+
+    @apply flex items-center border border-gray-200 rounded-full px-4;
+}
+
+.input-custom {
+
+    .input-custom-input {
+        background-image:none;
+        @apply w-full border border-gray-200 rounded-md text-base py-1 px-2;
+    }
+
+    .input-custom-input:focus,
+    .input-custom-input[aria-expanded=true] {
+        outline:none;
+    }
+
+    &[data-position=below] .input-custom-input[aria-expanded=true] { 
+        border-bottom-color:transparent;
+        border-radius:8px 8px 0 0;
+    }
+
+    &[data-position=above] .input-custom-input[aria-expanded=true] { 
+        border-radius:0 0 8px 8px;
+        border-top-color:transparent;
+        z-index:2
+    }
+
+    .input-custom-result-list {
+        border:1px solid rgba(0,0,0,.12);
+        max-height:125px;
+        @apply bg-white overflow-y-auto shadow-normal p-0 box-border;
+    }
+
+    &[data-position=below] .input-custom-result-list {
+        border-top-color:transparent;
+        border-radius:0 0 8px 8px;
+        margin-top:-1px;
+        padding-bottom:8px
+    }
+
+    &[data-position=above] .input-custom-result-list {
+        border-bottom-color:transparent;
+        border-radius:8px 8px 0 0;
+        margin-bottom:-1px;
+        padding-top:8px
+    }
+
+    .input-custom-result {
+        cursor:default;
+        padding-bottom: 12px;
+        padding-top: 12px;
+        @apply px-2;
+    }
+
+    .input-custom-result:hover,
+    .input-custom-result[aria-selected=true] {
+        background-color:rgba(0,0,0,.06)
+    }
+}

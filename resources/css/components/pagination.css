@@ -1,0 +1,15 @@
+.pagination {
+    @apply flex flex-row text-sm text-gray-300;
+
+    li {
+        @apply p-1;
+    }
+
+    li.active span {
+        @apply text-primary font-bold;
+    }
+
+    li:not(.active):hover a {
+        @apply text-gray-400;
+    }
+}

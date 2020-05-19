@@ -1,0 +1,67 @@
+.table {
+    @apply w-full table-fixed text-sm;
+
+    &--bordered {
+        @apply border border-gray-200;
+    }
+
+    &--stackable {
+
+        thead {
+            @apply hidden;
+        }
+    
+        tbody {
+            td::before {
+                content: attr(data-label);
+                @apply font-bold text-left;
+            }
+    
+            td {
+                @apply flex justify-between;
+            }
+    
+            td:last-child {
+                @apply pb-4;
+            }
+    
+            tr:not(:last-child) {
+                @apply border-b border-gray-100;
+            }
+        }
+    }
+}
+
+.table thead tr th,
+.table tbody tr td {
+    @apply px-3 break-words py-2;
+}
+
+.table thead tr th {
+    @apply bg-gray-200 font-normal text-gray-400 text-left;
+}
+
+.table-wrap-overflow {
+    @apply overflow-x-auto;
+}
+
+@screen md {
+    .table {
+        &--stackable {
+            thead {
+                @apply table-header-group;
+            }
+
+            tbody {
+                td:before {
+                    content: '';
+                }
+
+                td {
+                    @apply table-cell;
+                }
+            }
+        }
+    }
+}
+
