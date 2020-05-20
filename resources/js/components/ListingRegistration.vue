@@ -35,7 +35,8 @@
                                     <span class="toggle__label">{{ trans('translations.this_business_accepts_bitcoin') }}</span>
                                     <span class="toggle__switch"></span>
                                 </label>
-                            </div>                                
+                            </div>
+                            <span class="error-message" v-if="form.errors.has('acceptsBitcoin')">{{ form.errors.first('acceptsBitcoin') }}</span>                                
                         </div>
                     </div>
                     <div class="listing-registration__step" v-if="form.currentStep === 2" :key="2">

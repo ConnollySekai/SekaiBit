@@ -147,6 +147,9 @@ return [
             'max' => 'contact email must not exceed 255 characters',
             'unique' => 'contact email already exists'
         ],
+        'acceptsBitcoin' => [
+            'accepted' => 'Your business must accept bitcoin payments'
+        ],
         'productsServices' => [
             'required' => 'must provide a short description about your product/service',
             'string' => 'products/services must be a string',
