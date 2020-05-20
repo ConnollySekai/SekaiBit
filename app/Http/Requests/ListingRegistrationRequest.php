@@ -27,7 +27,8 @@ class ListingRegistrationRequest extends FormRequest
             return [
                 'businessName' => ['required', 'string', 'max:255', 'unique:listings,business_name'],
                 'websiteUrl' => ['required', 'max:255', 'regex:/^((http|https):\/\/)?(www\.)?([-a-z0-9]+\.)+[-a-z0-9]+(\/[-a-z0-9]+)*$/', 'unique:listings,website_url'],
-                'contactEmail' => ['nullable','email', 'max:255','unique:listings,contact_email']
+                'contactEmail' => ['nullable','email', 'max:255','unique:listings,contact_email'],
+                'acceptsBitcoin' => ['accepted']
             ];
         } else {
             return [
