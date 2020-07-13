@@ -9,14 +9,13 @@
                     <form action="{{ route('search.index') }}" method="get" ref="searchForm" @submit.prevent="formSubmit">
                         <search-input 
                         :input-name="'q'"
-                        :default-value="'{{ request('q') }}'" 
+                        :default-value="{{ json_encode(request('q')) }}" 
                         :handle-enter="handleEnter"
                         :handle-submit="handleSubmit" 
-                        :placeholder="'{{ trans('translations.browse_websites') }}'"
+                        :placeholder="{{ json_encode(trans('translations.browse_websites')) }}"
                         :search="search" ></search-input>
                     </form>
                 </div>
-                
                 <div class="search__result-count">
                     @if ($listings !== null)
                         @if ($listings->total() === 0)
